@@ -3,13 +3,6 @@ const User = require('../models/user');
 const config = require('../config/production');
 const jwt = require('jsonwebtoken');
 
-//Initializing CognitoExpress constructor
-/**
- * !!!IMPORTANT NOTE!!!
- * As we mentioned in the class, the following values are provided only to unblock our backend developmemnt.
- * Therefore, we will delete the following service soon.
- * To avoid down your app, please replace the following values once you create your own AWS Cognito Service in frontend class
- */
 const cognitoExpressToC = new CognitoExpress({
   region: config.CognitoRegion,
   cognitoUserPoolId: config.CognitoToCUserPoolId,
